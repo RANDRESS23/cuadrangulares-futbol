@@ -13,8 +13,8 @@ export interface Partido {
     id: string;
     nombre: string;
   };
-  golesLocal?: number;
-  golesVisitante?: number;
+  golesLocal: number | null;
+  golesVisitante: number | null;
   estado: string;
   grupoId?: string;
 }

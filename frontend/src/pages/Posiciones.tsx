@@ -29,13 +29,18 @@ export default function Posiciones() {
           );
           const partidosGanados = partidosEquipo.filter(
             (partido) =>
-              (partido.equipoLocalId === equipo.id &&
-                partido?.golesLocal > partido?.golesVisitante) ||
-              (partido.equipoVisitanteId === equipo.id &&
-                partido?.golesVisitante > partido?.golesLocal),
+              partido.golesLocal !== null &&
+              partido.golesVisitante !== null &&
+              ((partido.equipoLocalId === equipo.id &&
+                partido.golesLocal > partido.golesVisitante) ||
+                (partido.equipoVisitanteId === equipo.id &&
+                  partido.golesVisitante > partido.golesLocal)),
           ).length;
           const partidosEmpatados = partidosEquipo.filter(
-            (partido) => partido?.golesLocal === partido?.golesVisitante,
+            (partido) =>
+              partido.golesLocal !== null &&
+              partido.golesVisitante !== null &&
+              partido.golesLocal === partido.golesVisitante,
           ).length;
 
           return {
@@ -44,27 +49,29 @@ export default function Posiciones() {
             partidosGanados,
             partidosPerdidos: partidosEquipo.filter(
               (partido) =>
-                (partido.equipoLocalId === equipo.id &&
-                  partido?.golesLocal < partido?.golesVisitante) ||
-                (partido.equipoVisitanteId === equipo.id &&
-                  partido?.golesVisitante < partido?.golesLocal),
+                partido.golesLocal !== null &&
+                partido.golesVisitante !== null &&
+                ((partido.equipoLocalId === equipo.id &&
+                  partido.golesLocal < partido.golesVisitante) ||
+                  (partido.equipoVisitanteId === equipo.id &&
+                    partido.golesVisitante < partido.golesLocal)),
             ).length,
             partidosEmpatados,
             golesFavor: partidosEquipo.reduce((total, partido) => {
               if (partido.equipoLocalId === equipo.id) {
-                return total + (partido?.golesLocal || 0);
+                return total + (partido.golesLocal || 0);
               }
               if (partido.equipoVisitanteId === equipo.id) {
-                return total + (partido?.golesVisitante || 0);
+                return total + (partido.golesVisitante || 0);
               }
               return total;
             }, 0),
             golesContra: partidosEquipo.reduce((total, partido) => {
               if (partido.equipoLocalId === equipo.id) {
-                return total + (partido?.golesVisitante || 0);
+                return total + (partido.golesVisitante || 0);
               }
               if (partido.equipoVisitanteId === equipo.id) {
-                return total + (partido?.golesLocal || 0);
+                return total + (partido.golesLocal || 0);
               }
               return total;
             }, 0),
