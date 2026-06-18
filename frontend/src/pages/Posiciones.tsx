@@ -45,7 +45,10 @@ export default function Posiciones() {
 
           return {
             ...equipo,
-            partidosJugados: partidosEquipo.length,
+            partidosJugados: partidosEquipo.filter(
+              (partido) =>
+                partido.golesLocal !== null && partido.golesVisitante !== null,
+            ).length,
             partidosGanados,
             partidosPerdidos: partidosEquipo.filter(
               (partido) =>

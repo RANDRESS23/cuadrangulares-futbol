@@ -59,7 +59,7 @@ export function useEliminarEquipo() {
       toast.success('Equipo eliminado exitosamente');
     },
     onError: () => {
-      const messageError = 'Error al eliminar el equipo';
+      const messageError = 'Error al eliminar el equipo, el sorteo ya fue realizado';
       toast.error(messageError);
     },
   });
