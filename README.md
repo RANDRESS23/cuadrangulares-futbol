@@ -15,9 +15,9 @@
 
 ## 🎯 Descripción del Proyecto
 
-**Torneo FC** es una aplicación web moderna y completa para la gestión de torneos de fútbol. Permite organizar y administrar un torneo con **8 equipos** distribuidos automáticamente en **2 cuadrangulares** (Grupo A y Grupo B), generando **24 partidos totales** con la modalidad "todos contra todos".
+**Torneo FC** es una aplicación web moderna y completa para la gestión de torneos de fútbol. Permite organizar y administrar un torneo con **8 equipos** distribuidos automáticamente en **2 cuadrangulares** (Grupo A y Grupo B), generando **24 partidos totales** con la modalidad "todos contra todos" con ida y vuelta.
 
-La aplicación calcula automáticamente posiciones, estadísticas, goleadores y proporciona una interfaz interactiva para seguimiento en tiempo real del torneo.
+La aplicación calcula automáticamente las posiciones del torneo a medida que se vayan dando los resultados de los distintos partidos y además, proporciona una interfaz interactiva para un mejor seguimiento del torneo.
 
 <img width="1920" height="1440" alt="image" src="https://github.com/user-attachments/assets/5328df4f-654e-4154-8c00-f0c3d618cad0" />
 
@@ -26,8 +26,6 @@ La aplicación calcula automáticamente posiciones, estadísticas, goleadores y 
 - ⚡ **Sorteo Automático**: Distribución equilibrada de 8 equipos en 2 grupos de 4
 - 📊 **Cálculo Automático**: Posiciones, puntos, goles favor/en contra y diferencia de goles
 - 📱 **Interfaz Responsive**: Diseño moderno y funcional en todos los dispositivos
-- 🔄 **Actualización en Tiempo Real**: Cambios instantáneos sin recargar la página
-- 📈 **Estadísticas Detalladas**: Tracking completo de equipos, jugadores y partidos
 - 🎉 **Efectos Visuales**: Animaciones y confeti para momentos especiales
 - 🔒 **API Segura**: Validación y manejo robusto de errores
 - 📖 **Documentación Swagger**: API completamente documentada e interactiva
@@ -48,7 +46,6 @@ La aplicación calcula automáticamente posiciones, estadísticas, goleadores y 
 - **React Router** - Navegación
 - **Zod** - Validación de esquemas
 - **Framer Motion** - Animaciones fluidas
-- **Recharts** - Visualización de datos
 - **Lucide React** - Iconos
 - **Axios** - HTTP client
 
@@ -61,7 +58,6 @@ La aplicación calcula automáticamente posiciones, estadísticas, goleadores y 
 - **Supabase** - Base de datos y autenticación
 - **PostgreSQL** - Motor de base de datos
 - **Swagger** - Documentación API
-- **Morgan** - HTTP logging
 - **Helmet** - Seguridad HTTP
 - **Validator** - Validación de datos
 - **ESLint & Prettier** - Code quality
@@ -135,8 +131,6 @@ NODE_ENV=development
 SUPABASE_URL=https://your-project.supabase.co
 SUPABASE_KEY=your-anon-key
 SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
-
-CORS_ORIGIN=http://localhost:5173
 ```
 
 **Frontend** - Crear `frontend/.env.local`:
