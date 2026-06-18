@@ -56,6 +56,10 @@ export default function Sorteo() {
     try {
       await realizarSorteo.mutateAsync();
       handleConfetti();
+
+      setTimeout(() => {
+        window.location.reload();
+      }, 3000);
     } catch (error) {
       console.error("Error al realizar el sorteo:", error);
     } finally {
@@ -63,8 +67,12 @@ export default function Sorteo() {
     }
   };
 
-  const grupoA = gruposFinales[0]?.equipos || [];
-  const grupoB = gruposFinales[1]?.equipos || [];
+  const grupoA = useMemo(() => {
+    return gruposFinales[0]?.equipos || [];
+  }, [gruposFinales]);
+  const grupoB = useMemo(() => {
+    return gruposFinales[1]?.equipos || [];
+  }, [gruposFinales]);
 
   return (
     <motion.div

@@ -17,6 +17,7 @@ import { SkeletonCard } from "../components/ui/Skeleton";
 import { useEquipos } from "../hooks/useEquipos";
 import { useGrupos } from "../hooks/useGrupos";
 import { handleConfetti } from "../utils/confetti";
+import { cn } from "../utils/helpers";
 
 export default function Partidos() {
   const { data: partidos = [], isLoading } = usePartidos();
@@ -157,6 +158,15 @@ export default function Partidos() {
                   {partido.grupo?.nombre}
                 </div>
 
+                <div
+                  className={cn(
+                    "absolute top-0 px-4 py-1 font-semibold text-pink-200 bg-pink-900 rounded-lg",
+                    index % 2 === 0 ? "left-[31%]" : "left-[29%]",
+                  )}
+                >
+                  {index % 2 === 0 ? "IDA" : "VUELTA"}
+                </div>
+
                 {/* Marcador */}
                 <div className="flex gap-4 justify-center items-center px-6 py-4 rounded-lg bg-zinc-800 min-w-32">
                   <span className="text-3xl font-bold text-white">
@@ -217,6 +227,10 @@ export default function Partidos() {
                   }
                 >
                   {partido.grupo?.nombre}
+                </div>
+
+                <div className="absolute top-0 left-[30%] px-4 py-1 font-semibold text-pink-200 bg-pink-900 rounded-lg">
+                  {index % 2 === 0 ? "IDA" : "VUELTA"}
                 </div>
 
                 {/* Marcador */}
