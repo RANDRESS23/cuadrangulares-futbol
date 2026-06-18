@@ -8,7 +8,6 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-6.0-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Express](https://img.shields.io/badge/Express-4.18-000000?logo=express&logoColor=white)](https://expressjs.com/)
 [![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-3ECF8E?logo=supabase&logoColor=white)](https://supabase.com/)
-[![License](https://img.shields.io/badge/License-ISC-yellow)](LICENSE)
 
 </div>
 
@@ -19,6 +18,8 @@
 **Torneo FC** es una aplicación web moderna y completa para la gestión de torneos de fútbol. Permite organizar y administrar un torneo con **8 equipos** distribuidos automáticamente en **2 cuadrangulares** (Grupo A y Grupo B), generando **24 partidos totales** con la modalidad "todos contra todos".
 
 La aplicación calcula automáticamente posiciones, estadísticas, goleadores y proporciona una interfaz interactiva para seguimiento en tiempo real del torneo.
+
+<img width="1920" height="1440" alt="image" src="https://github.com/user-attachments/assets/5328df4f-654e-4154-8c00-f0c3d618cad0" />
 
 ### ✨ Características Principales
 
@@ -37,6 +38,8 @@ La aplicación calcula automáticamente posiciones, estadísticas, goleadores y 
 ## 🏗️ Tech Stack
 
 ### Frontend
+#### URL Frontend: https://cuadrangulares-futbol.vercel.app/
+
 - **React 19** - UI library moderna
 - **TypeScript** - Type safety
 - **Vite** - Build tool rápido
@@ -50,6 +53,9 @@ La aplicación calcula automáticamente posiciones, estadísticas, goleadores y 
 - **Axios** - HTTP client
 
 ### Backend
+#### URL Backend: https://cuadrangulares-futbol.onrender.com
+#### URL API Backend: https://cuadrangulares-futbol.onrender.com/api/docs/
+
 - **Node.js** - Runtime
 - **Express** - Web framework
 - **Supabase** - Base de datos y autenticación
@@ -101,7 +107,7 @@ npm --version
 ### 1. Clonar el Repositorio
 
 ```bash
-git clone https://github.com/tu-usuario/cuadrangulares-futbol.git
+git clone https://github.com/RANDRESS23/cuadrangulares-futbol.git
 cd cuadrangulares-futbol
 ```
 
@@ -343,7 +349,7 @@ La aplicación sigue una **arquitectura en capas** bajo principios **SOLID** par
 Una vez el servidor backend esté corriendo, accede a la documentación interactiva de la API:
 
 ```
-http://localhost:3000/api-docs
+http://localhost:3000/api/docs
 ```
 
 Aquí puedes:
@@ -550,28 +556,6 @@ Las contribuciones son bienvenidas! Para cambios importantes:
 
 ---
 
-## 📸 Screenshots y Visuales
-
-> 🖼️ Sección destinada para agregar capturas de pantalla de:
-> - Dashboard principal
-> - Tabla de posiciones
-> - Gestión de partidos
-> - Efectos visuales y animaciones
-> - Pantalla de sorteo
-
-```markdown
-### Dashboard
-![Dashboard Screenshot](docs/images/dashboard.png)
-
-### Tabla de Posiciones
-![Posiciones Screenshot](docs/images/posiciones.png)
-
-### Gestión de Partidos
-![Partidos Screenshot](docs/images/partidos.png)
-```
-
----
-
 ## 📋 Información Adicional
 
 ### 📊 Datos del Torneo
@@ -589,12 +573,6 @@ Las contribuciones son bienvenidas! Para cambios importantes:
 2. **Diferencia de Goles** (goles favor - goles contra)
 3. **Goles a Favor**
 4. **Goles en Contra**
-
----
-
-## 👨‍💻 Autor
-
-Desarrollado con ❤️ para la gestión de torneos de fútbol.
 
 ---
 
